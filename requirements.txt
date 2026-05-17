@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+streamlit
+openai
+python-dotenv
+pydantic
+requests
+reportlab
+httpx
+anthropic
