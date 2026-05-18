@@ -6,6 +6,10 @@ load_dotenv()
 
 PROVIDER = os.getenv("LLM_PROVIDER", "openai")
 
+def ask_llm(system_prompt: str, user_prompt: str) -> str:
+    combined = f"{system_prompt}\n\n{user_prompt}"
+    return get_llm_response(combined)
+
 def get_llm_response(prompt: str) -> str:
     if PROVIDER == "openai":
         return _call_openai(prompt)

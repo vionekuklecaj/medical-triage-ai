@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\bledi\\\\Desktop\\\\xpo\\\\medical-triage-ai\\\\output\\\\reports\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType File -Force \"c:\\\\Users\\\\bledi\\\\Desktop\\\\xpo\\\\medical-triage-ai\\\\output\\\\reports\\\\.gitkeep\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\bledi\\\\Desktop\\\\xpo\\\\medical-triage-ai\\\\output\\\\reports\")",
+      "PowerShell(New-Item -ItemType File -Force \"c:\\\\Users\\\\bledi\\\\Desktop\\\\xpo\\\\medical-triage-ai\\\\output\\\\reports\\\\.gitkeep\")"
+    ]
+  }
+}
