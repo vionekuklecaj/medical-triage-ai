@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from models.patient import PatientInput
+from models.patient import PatientInput, IntakeResult
 from agents.intake_agent import run_intake_agent
 
 app = FastAPI(
@@ -25,10 +25,11 @@ def root():
 def health_check():
     return {"status": "healthy", "agent": "intake"}
 
-@app.post("/intake")
+@app.post("/intake", response_model=IntakeResult) 
 def intake(patient: PatientInput):
     try:
         result = run_intake_agent(patient)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+

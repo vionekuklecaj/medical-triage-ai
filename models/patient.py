@@ -22,16 +22,15 @@ class IntakeResult(BaseModel):
 
 
 class TriageResult(BaseModel):
-    urgency_level: str          # "low", "medium", "high", "critical"
-    urgency_score: int          # 1–10
-    reasoning: str
+    urgency_level: str         
+    urgency_score: int         
     recommended_action: str
     critical_flags: List[str]
 
 
 class DrugHistoryResult(BaseModel):
     interactions_found: List[str]
-    risk_level: str             # "none", "moderate", "severe"
+    risk_level: str             
     history_flags: List[str]
     recommendations: str
 

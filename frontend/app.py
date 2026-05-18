@@ -1,8 +1,10 @@
 import streamlit as st
 import sys
 import os
+from pathlib import Path
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+ROOT_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT_DIR))
 
 from models.patient import PatientInput
 from agents.intake_agent import run_intake_agent
