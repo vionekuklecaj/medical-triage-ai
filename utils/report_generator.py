@@ -121,7 +121,6 @@ def generate_pdf_report(report, pdf_path: str) -> None:
         story.append(Spacer(1, 6))
         story.append(Paragraph(f"<b>Urgency Score:</b> {t.urgency_score}/10", s["body"]))
         story.append(Paragraph(f"<b>Recommended Action:</b> {t.recommended_action}", s["body"]))
-        story.append(Paragraph(f"<b>Clinical Reasoning:</b> {t.reasoning}", s["body"]))
         if t.critical_flags:
             story.append(Paragraph("<b>Critical Flags:</b>", s["body"]))
             for flag in t.critical_flags:
