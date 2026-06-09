@@ -1,4 +1,4 @@
-
+.env.example
 .env
 .claude/
 venv/
@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 output/reports/*
 !output/reports/.gitkeep
+smoke_test.py
+sample_patient.json
